@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const API_KEY = 'e4a7f8e9'
 
@@ -30,7 +31,7 @@ export class Detail extends Component {
 
     // Este metodo se ejecuta justo despues de un renderizado almenos
     componentDidMount() {
-        const { id } = this.props
+        const { id } = this.props.match.params
         this.fetchMovieDetail({ id })
     }
 
@@ -38,7 +39,11 @@ export class Detail extends Component {
         const { Title, Poster, Actors, Metascore, Plot } = this.state.movie
         return(
             <div>
-                <button onClick={this._goBack()}>Volver</button>
+                <Link
+                    className="button is-info"
+                    to="/">
+                    Volver
+                </Link>
                 <h1>{Title}</h1>
                 <img src={Poster} alt=""/>
                 <h3>{Actors}</h3>
