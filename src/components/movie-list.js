@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Movie } from './movie';
+import '../pages/styles/home.css'
 
 export class MovieList extends Component {
     static propTypes = {
@@ -9,11 +10,11 @@ export class MovieList extends Component {
     render() {
         const { movies } = this.props
         return(
-        <div className="MoviesList">
+        <div className="home-results">
             {
                 movies.map(movie => {
                     return (
-                        <div key={movie.imdbID} className="MoviesList-item">
+                        <div key={movie.imdbID}>
                             <Movie
                                 id={movie.imdbID}
                                 title={movie.Title}

@@ -1,10 +1,9 @@
-.Home {
+.home {
     width: 100%;
     max-width: 1280px;
-    text-align: center;
   }
   
-  .Home__container {
+  .home-container {
     padding-right: 15px;
     padding-left: 15px;
     width: 100%;
@@ -14,36 +13,37 @@
     flex-direction: column;
   }
   
-  .Home__form {
+  .home-form {
     width: 100%;
     max-width: 400px;
     margin-top: 15px;
   }
   
-  .Home__description {
+  .home-description {
     margin-top: 20px;
     width: 1280px;
     display: flex;
     justify-content: center;
   }
   
-  .Home__results {
+  .home-results {
     max-width: 95vw;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
   
-  .Home__movie {
+  .home-movie {
     position: relative;
     width: 25%;
     box-sizing: border-box;
     padding: 10px;
     border-radius: 15px;
+   
   }
   
-  .Home__movieImg {
+  .home-movieImg {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -51,9 +51,10 @@
     left: 0;
     border-radius: 15px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+    margin: 5px;
   }
   
-  .Home__movieImg_blured {
+  .home-movieImg-blured {
     position: absolute;
     z-index: 1;
     opacity: .8;
@@ -61,7 +62,7 @@
     transform: scale(0.9) translateY(20px);
   }
   
-  .Home__movieContent {
+  .home-movieContent {
     position: absolute;
     z-index: 3;
     left: 15px;
@@ -77,58 +78,59 @@
     transition: opacity 0.4s ease
   }
   
-  .Home__movie:hover .Home__movieContent {
+  .home-movie:hover .home-movieContent {
     opacity: 1;
   }
   
-  .Home__movieContent-title  {
+  .home-movieContent-title  {
     font-weight: 700;
   }
   
-  .Home__movieContent-year {
+  .home-movieContent-year {
     font-size: 0.8rem;
   }
   
-  .Home__credits {
+  .home-credits {
     margin-top: 30px;
     margin-bottom: 30px;
-    opacity: 0.3;
+    opacity: 0.5;
     transition: opacity 0.4s ease;
+    color: white;
   }
   
-  .Home__credits:hover {
+  .home-credits:hover {
     opacity: 1
   }
   
   @media screen and (max-width: 768px) {
-    .Home__movie {
+    .home-movie {
       width: calc(100% / 3);
     }
   
   }
   
   @media screen and (max-width: 500px) {
-    .Home__movie {
+    .home-movie {
       width: 50%;
       padding: 7px;
     }
   
-    .Home__movieImg {
+    .home-movieImg {
       border-radius: 10px;
     }
   
-    .Home__container {
+    .home-container {
       overflow-x: hidden;
     }
   
-    .Home__movieImg_blured {
+    .home-movieImg-blured {
       transform: scale(0.9) translateY(15px);
     }
   
   }
   
   @media screen and (max-width: 320px) {
-    .Home__movie {
+    .home-movie {
       width: 95%;
     }
   }

@@ -1,15 +1,11 @@
 .App {
-  text-align: center;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
-  display: block;
-}
-.titulo{
-  color: aliceblue;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 @keyframes gradient {
@@ -28,33 +24,3 @@
   background-color:dimgrey;
 }
 
-.titulo {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.search-form {
-  display: flex;
-  justify-content: center ;
-}
-
-.MoviesList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.MoviesList-item {
-  margin-bottom: 24px;
-  width: 48%;
-}
-
-.image{
-  height: 150px;
-  width: 200px;
-}
-
-.footer{
- display: block;
-}

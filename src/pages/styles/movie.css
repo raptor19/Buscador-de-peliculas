@@ -1,0 +1,53 @@
+.home-movie {
+    position: relative;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 15px;
+   
+}
+  .home-movieImg {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+    margin: 5px;
+}
+  
+  .home-movieImg-blured {
+    position: absolute;
+    z-index: 1;
+    opacity: .8;
+    filter: blur(15px);
+    transform: scale(0.9) translateY(20px);
+}
+  
+  .home-movieContent {
+    position: absolute;
+    z-index: 3;
+    left: 15px;
+    right: 15px;
+    bottom: 20px;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.8);
+    /* background-color: black; */
+    border-radius: 15px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.4s ease
+  }
+  
+  .home-movie:hover .home-movieContent {
+    opacity: 1;
+  }
+  .home-movieContent-title  {
+    font-weight: 700;
+  }
+  
+  .home-movieContent-year {
+    font-size: 0.8rem;
+  }

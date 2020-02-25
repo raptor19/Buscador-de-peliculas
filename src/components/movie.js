@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import '../pages/styles/movie.css'
+
 
 export class Movie extends Component {
     static propTypes = {
@@ -10,27 +12,30 @@ export class Movie extends Component {
         poster: PropTypes.string,
         type: PropTypes.string
     }
+    
 
     render() {
-        const { id, poster, title, year, type } = this.props
+
+        const mystyle = {
+            color: "white",
+            backgroundColor: "DodgerBlue",
+            padding: "10px",
+            fontFamily: "Arial"
+          };
+
+        const { id, poster, title,  type, year } = this.props
         return (
-                <Link to={`/detail/${id}`} className="card">
-                    <div className="card-image">
-                        <figure className="image">
-                            <img  
-                            alt={title}  
-                            src={poster}
-                            />
-                        </figure>
-                    </div>
-                    <div className="card-content">
-                        <div className="media-content">
-                            <p className="title is-4">{title}</p>
-                            <p className="subtitle is-6">{type}</p>
-                            <p className="subtitle is-6">{year}</p>
-                        </div>
-                    </div>       
-                </Link>
-            );
-            }
-            }
+            <Link to={`/detail/${id}`} className="home-movie">
+                <img
+                    className="home-movieImg"
+                    alt={title}
+                    src={poster} />
+                <div>
+                    <p style={mystyle}>
+                    {type} - {year}
+                    </p>
+                </div>
+            </Link>
+        );
+    }
+}
